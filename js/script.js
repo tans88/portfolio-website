@@ -1,3 +1,4 @@
+// controls the swiping in the skills section
 var swiper = new Swiper(".swiper", {
     cssMode: true,
     navigation: {
