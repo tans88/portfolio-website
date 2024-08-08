@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #ebe9e1;
+    --second-bg-color: #d1cdc7;
+    --text-color: black;
+    --main-color: #d6536d;
+    --second-main-color: #e43d12;
+    --contrast-color: #efb11d;
+}
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Logo and Nav Bar */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    padding: 3rem 12% 2.5rem;
+    background: var(--bg-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo span{
+    color: var(--contrast-color);
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.nav-menu{
+    display: flex;
+}
+
+.nav-menu ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a{
+    margin-right: 3rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover{
+    color: var(--main-color);
+}
+
+.nav-menu button{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: var(--second-main-color);
+    border-radius: 5rem;
+    border: 2px solid var(--second-main-color);
+    padding: 0.5rem;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-menu button a{
+    margin-right: 0;
+}
+
+.nav-menu button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu button a:hover{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    font-size: 2rem;
+    color: var(--main-color);
+    display: none;
+}
+
+/* Home Section */
+
+section{
+    min-height: 100vh;
+    padding: 3rem 10% 3rem;
+}
+
+.home{
+    position: relative;
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.text-animation{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    margin-right: 2rem;
+    text-align: left;
+}
+
+.text-animation span{
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-animation span::before{
+    content: " my name is Tanya";
+    color: var(--main-color);
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    right: 0;
+    border-left: 3px solid var(--main-color);
+    animation: typing 5s steps(17, end) infinite, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    20% {
+        width: 100%;
+    }
+    40% {
+        width: 100%;
+    }
+    60% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink{
+    from, to{
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--main-color);
+    }
+}
+
+.home-img{
+    border-radius: 50%;
+    text-align: right;
+}
+
+.home-img img{
+    width: 28vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-position: right;
+    margin-left: 3.5rem;
+    padding: 0.5rem;
+    border: 3px solid var(--contrast-color);
+}
+
+.home-img img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.home-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-top: 1rem;
+    width: 85%;
+    text-align: left;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: 2px solid var(--second-main-color);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: var(--second-main-color);
+    margin: 1rem 1.5rem 3rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover{
+    transform: scale(1.1)translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Experience Section */
+
+.experience{
+    position: relative;
+    top: 1rem;
+    background-color: var(--second-bg-color);
+}
+
+.experience .heading{
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    width: 100%;
+}
+
+.timeline{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: 45%;
+}
+
+.item{
+    margin-bottom: 40px;
+    width: 90%;
+    position: relative;
+}
+
+.item:last-child{
+    margin-bottom: 0;
+}
+
+.item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: var(--main-color);
+    left: calc(50% - 8px);
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+}
+
+.date{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.description{
+    border: 4px solid var(--main-color);
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.description p{
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+
+.skills{
+    width: 100%;
+    background: var(--bg-color);
+    min-height: 80vh;
+}
+
+.skills .heading{
+    padding-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.swiper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background: var(--bg-color);
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    color: var(--main-color) !important;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    border-radius: 4rem;
+}
+
+.card i{
+    font-size: 10rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.pink i{
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+}
+
+.yellow i{
+    color: var(--contrast-color);
+    border: 3px solid var(--contrast-color);
+}
+
+.orange i{
+    color: var(--second-main-color);
+    border: 3px solid var(--second-main-color);
+}
+
+.card i:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+.card p{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Projects section */
+
+.projects{
+    background-color: var(--second-bg-color);
+}
+
+.projects .heading{
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+}
+
+.projects .all-proj{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.projects .proj-card{
+    display: flex; 
+    flex-direction: column;
+    width: 40%;
+    border: 4px solid var(--main-color);
+    border-radius: 4rem;
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    flex: 1;
+}
+
+.projects .proj-card h3{
+    font-size: 1.5rem;
+}
+
+.projects .proj-card .proj-title{
+    text-align: center;
+}
+
+.projects .proj-card .language{
+    text-align: center;
+    font-style: italic;
+}
+
+.projects .proj-card p{
+    margin-bottom: 1.5rem;
+}
+
+.projects .proj-card span{
+    font-style: italic;
+}
+
+/* Contact section */
+
+.contact{
+    background-color: var(--bg-color);
+}
+
+.contact .heading{
+    padding-top: 2rem;
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    width: 100%;
+}
+
+.contact .heading span{
+    color: var(--contrast-color);
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.contact form .input-box input{
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+.contact form .input-box input, .contact form textarea{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    border: 4px solid var(--main-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    background-color: var(--bg-color);
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+    width: 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    background-color: var(--second-main-color);
+    border: 4px solid var(--second-main-color);
+    transition: 0.3s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.contact form .btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer section */
+
+footer{
+    margin-top: 2rem;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    text-align: center;
+}
+
+.social-icons a{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer .social-icons a:hover{
+    transform: scale(1.01);
+}
