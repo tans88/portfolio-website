@@ -107,18 +107,48 @@ body{
 
 #menu-icon{
     font-size: 2rem;
+    font-weight: 500;
     color: var(--main-color);
     display: none;
 }
 
+@media only screen and (max-width: 1100px){
+    .logo{
+        font-size: 1.5rem;
+    }
+
+    .nav-menu a{
+        margin-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .logo{
+        font-size: 1.5rem;
+    }
+
+    .nav-menu{
+        display: none;
+    }
+
+    #menu-icon{
+        display: block;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+    #menu-icon:hover{
+        transform: scale(1.2);
+    }
+}
 /* Home Section */
 
 section{
-    min-height: 100vh;
     padding: 3rem 10% 3rem;
 }
 
 .home{
+    min-height: 900px;
     position: relative;
     top: 4rem;
     display: flex;
@@ -202,7 +232,6 @@ section{
 .home-img img{
     width: 28vw;
     border-radius: 50%;
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-position: right;
     margin-left: 3.5rem;
@@ -242,6 +271,26 @@ section{
 .social-icons a:hover{
     transform: scale(1.1)translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 950px){
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-img{
+        order: -1;
+        text-align: center;
+    }
+
+    .home-img img{
+        margin-left: 0;
+        margin-right: 3rem;
+        padding: 0.5;
+        object-position: 50% 50%;
+        width: 40vw;
+    }
 }
 
 /* Experience Section */
@@ -332,7 +381,7 @@ section{
 .skills{
     width: 100%;
     background: var(--bg-color);
-    min-height: 80vh;
+    min-height: 700px;
 }
 
 .skills .heading{
@@ -414,6 +463,7 @@ section{
 
 .projects{
     background-color: var(--second-bg-color);
+    min-height: 800px;
 }
 
 .projects .heading{
@@ -462,10 +512,18 @@ section{
     font-style: italic;
 }
 
+@media only screen and (max-width: 1100px){
+    .projects .proj-card{
+        width: 50%;
+        margin: 1rem;
+    }
+}
+
 /* Contact section */
 
 .contact{
     background-color: var(--bg-color);
+    min-height: 800px;
 }
 
 .contact .heading{

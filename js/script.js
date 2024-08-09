@@ -11,3 +11,5 @@ var swiper = new Swiper(".swiper", {
     mousewheel: true,
     keyboard: true,
 });
+
+// sends email through contact form --> don't forget to clear the values in the boxes after email is sent 
