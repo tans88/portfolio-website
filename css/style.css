@@ -132,6 +132,7 @@ body{
 }
 
 @media only screen and (max-width: 950px){
+
     .logo{
         font-size: 1.5rem;
     }
@@ -356,6 +357,10 @@ section{
 }
 
 @media only screen and (max-width: 950px){
+    section{
+        padding: 3rem 10% 3rem;
+    }
+
     .home{
         display: flex;
         flex-direction: column;
@@ -396,6 +401,10 @@ section{
 }
 
 @media only screen and (max-width: 550px){
+    section{
+        padding: 4rem 10% 3rem;
+    }
+
     .home-img img{
         width: 70vw;
         margin-right: 0;
