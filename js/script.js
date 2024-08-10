@@ -12,4 +12,27 @@ var swiper = new Swiper(".swiper", {
     keyboard: true,
 });
 
-// sends email through contact form --> don't forget to clear the values in the boxes after email is sent 
+// mobile menu
+
+const menuIcon = document.getElementById("menu-icon");
+const exitMenu = document.getElementById("exit-menu");
+const navMenu = document.getElementById("nav-menu");
+
+const openMenu = () => {
+  if (window.innerWidth <= 950){
+    navMenu.style.display = "flex";
+    menuIcon.style.display = "none";
+    exitMenu.style.display = "block";
+  }
+};
+
+const closeMenu = () => {
+  if (window.innerWidth <= 950){
+    navMenu.style.display = "none";
+    menuIcon.style.display = "block";
+    exitMenu.style.display = "none";
+  }
+};
+
+menuIcon.addEventListener("click", openMenu);
+exitMenu.addEventListener("click", closeMenu);
