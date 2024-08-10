@@ -234,7 +234,7 @@ section{
 }
 
 .home-img img{
-    width: 25vw;
+    width: 28vw;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-position: right;
