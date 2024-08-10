@@ -370,6 +370,7 @@ section{
     .home-img{
         order: -1;
         text-align: center;
+        margin-top: 3rem;
     }
 
     .home-img img{
