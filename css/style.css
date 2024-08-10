@@ -18,6 +18,8 @@
 html{
     font-family: "Poppins", sans-serif;
     font-size: 16px;
+    width: 100%;
+    height: 100%;
 }
 
 body{
@@ -141,16 +143,17 @@ body{
         transform: scale(1.2);
     }
 }
+
 /* Home Section */
 
 section{
-    padding: 3rem 10% 3rem;
+    padding: 2rem 10% 3rem;
 }
 
 .home{
     min-height: 900px;
+    width: 100%;
     position: relative;
-    top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,6 +182,7 @@ section{
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
+    vertical-align: bottom;
 }
 
 .text-animation span::before{
@@ -273,10 +277,21 @@ section{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+@media only screen and (max-width: 1024px){
+    .home{
+        top: 4.5rem;
+    }
+
+    .home-content p{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 950px){
     .home{
         display: flex;
         flex-direction: column;
+        top: 4rem;
     }
 
     .home-img{
@@ -286,17 +301,39 @@ section{
 
     .home-img img{
         margin-left: 0;
-        margin-right: 3rem;
+        margin-right: 2rem;
         padding: 0.5;
         object-position: 50% 50%;
-        width: 60vw;
+        width: 45vw;
     }
+
+    .home-content{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .home-content .text-animation{
+        font-size: 2rem;
+    }
+
+    .home-content p{
+        text-align: justify;
+        width: 100%;
+    }
+
+    .text-animation span::after {
+        content: none;
+        animation: none;
+    }
+
+
 }
 
 /* Experience Section */
 
 .experience{
     position: relative;
+    width: 100%;
     top: 1rem;
     background-color: var(--second-bg-color);
 }
@@ -464,6 +501,7 @@ section{
 .projects{
     background-color: var(--second-bg-color);
     min-height: 800px;
+    width: 100%;
 }
 
 .projects .heading{
@@ -524,6 +562,7 @@ section{
 .contact{
     background-color: var(--bg-color);
     min-height: 800px;
+    width: 100%;
 }
 
 .contact .heading{
