@@ -327,6 +327,17 @@ section{
     }
 }
 
+@media only screen and (max-width: 350px){
+    .text-animation{
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .social-icons a{
+        font-size: 1rem;
+    }
+}
+
 /* Experience Section */
 
 .experience{
@@ -443,6 +454,12 @@ section{
 @media only screen and (max-width: 775px){
     .experience .heading{
         font-size: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .experience .heading{
+        font-size: 1.5rem;
     }
 }
 
@@ -576,7 +593,28 @@ section{
     }
 
     .card i{
+        font-size: 5rem;
+    }
+
+    .card p{
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .card i{
         font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .skills .heading{
+        font-size: 1.5rem;
+    }
+
+    .card i{
+        font-size: 3.4rem;
     }
 
     .card p{
@@ -664,6 +702,12 @@ section{
     }
 }
 
+@media only screen and (max-width: 350px){
+    .projects .heading{
+        font-size: 1.5rem;
+    }
+}
+
 /* Contact section */
 
 .contact{
@@ -746,6 +790,16 @@ section{
 @media only screen and (max-width: 775px){
     .contact .heading{
         font-size: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .contact .heading{
+        font-size: 1.5rem;
+    }
+
+    .contact form .input-box input, .contact form textarea{
+        font-size: 1rem;
     }
 }
 
