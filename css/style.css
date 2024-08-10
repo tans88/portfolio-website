@@ -413,6 +413,35 @@ section{
     margin-bottom: 1rem;
 }
 
+@media only screen and (max-width: 950px){
+    .item{
+        text-align: left;
+        width: 100%;
+    }
+
+    .item::before{
+        left: 7px;
+    }
+
+    .item:nth-child(odd){
+        text-align: left;
+        padding-left: 37px;
+        padding-right: 0;
+    }
+
+    .item:nth-child(even){
+        padding-left: 37px;
+    }
+
+    .timeline::before{
+        left: 8px;
+    }
+
+    .dot{
+        left: 0;
+    }
+}
+
 /* Skills Section */
 
 .skills{
