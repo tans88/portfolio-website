@@ -175,12 +175,13 @@
 
             <div class="all-proj">
                 <div class="proj-card">
-                    <h3 class="proj-title">Tic-Tac-Toe</h3>
-                    <p class="language">Python</p>
-                    <p class="proj-description">Command-line-based Tic-Tac-Toe game, allowing players to compete against each other or an 
-                    AI opponent using the Minimax algorithm</p>
-                    <p class="proj-skills"><span>Skills demonstrated : </span>Implementation of gaming logic and algorithms, recursive 
-                    programming in the Minimax algorithm, utilization of randomization for AI opponent move selection</p>
+                    <h3 class="proj-title">Movie Recommendation App</h3>
+                    <p class="language">Python, React, PostgreSQL</p>
+                    <p class="proj-description">A web-based movie recommendation app where users can search for movies and receive recommendations 
+                    based on similar titles using machine learning. Users can also save titles to a personal library if they have an account</p>
+                    <p class="proj-skills"><span>Skills demonstrated : </span>Machine learning to implement the recommendation engine using Scikit-Learn, 
+                    full-stack development with Python, Flask for RESTful API creation, React.js for interactive front-end design, and PostgreSQL serves as 
+                    the database to store recommended movies </p>
                 </div>
                 <div class="proj-card">
                     <h3 class="proj-title">Planner App</h3>
@@ -198,7 +199,7 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="d6102c4a-29c2-4784-bd65-5526f2e5dd52">
                 <div class="input-group">
                     <div class="input-box">
@@ -213,7 +214,7 @@
                 <div class="input-group-2">
                     <textarea name="message" id="" cols="30" 
                     rows="10" placeholder="Your Message" required></textarea>
-                    <input type="submit" value="Send" class="btn">
+                    <input type="submit" value="Send" class="btn" id="btn">
                 </div>
             </form>
         </section>

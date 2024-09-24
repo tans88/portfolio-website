@@ -1,15 +1,15 @@
 // controls the swiping in the skills section
 var swiper = new Swiper(".swiper", {
-    cssMode: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
 });
 
 // mobile menu
@@ -36,3 +36,13 @@ const closeMenu = () => {
 
 menuIcon.addEventListener("click", openMenu);
 exitMenu.addEventListener("click", closeMenu);
+
+// clears input boxes after submit button pressed
+document.getElementById('contact-form').addEventListener('submit', () => {
+  setTimeout(() => {
+    this.reset();
+  }, 10);
+});
+
+// also fix bug where on laptop/desktop, when you zoom in, click on the menu and then zoom out
+// the menu option does not disappear
